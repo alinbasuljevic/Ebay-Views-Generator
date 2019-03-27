@@ -1,4 +1,4 @@
-import requests, time, names, threading
+import requests, time, threading
 
 num_of_views = int(input('Enter the amount of views you would like to generate: '))
 ebay_link = input('Enter Item Link: ')
