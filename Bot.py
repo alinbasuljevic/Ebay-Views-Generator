@@ -5,7 +5,7 @@ ebay_link = input('Enter Item Link: ')
 
 start_time = time.time()
 
-def get_item_url():
+def view_item():
     s = requests.Session()
     visiting_url = s.get(ebay_link)
     
@@ -22,7 +22,7 @@ def get_item_url():
 
 
 for i in range(num_of_views):
-    t = threading.Thread(target=get_item_url)
+    t = threading.Thread(target=view_item)
     t.start()
     print ('Item Viewed Successfully {}/{}'.format(i,num_of_views))
     i += 1
